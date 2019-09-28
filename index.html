@@ -3,13 +3,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Game</title>
+    <title>John Wick Word Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -18,10 +16,10 @@
 
         <div class="card">
             <div class="card-header">
-                Word to Guess
+                <h4>Word to Guess</h4>
             </div>
             <div class="card-body">
-                <h5 class="card-title" id="Word"></h5><span id="WordToGuess"></span>
+                <h3 class="card-title" id="Word">_ _ _ _ _ _ _</h3><span id="WordToGuess"></span>
             </div>
         </div>
 
@@ -68,5 +66,16 @@
                 <h5 class="card-title" id="Wrong"></h5><span id="LossCounter"></span>
             </div>
         </div>
+        <br>
+    </div>
+    <div class="card text-center">
+        <div class="card-footer text-muted">
+            © Nancy C. Harris 2019
+        </div>
+    </div>
 
-        <body>
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
