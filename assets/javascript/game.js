@@ -32,7 +32,7 @@ function startGame() {
     // Populate blanks and successes with the right number of blanks
 
     for (var i = 0; i < numBlanks; i++) {
-        blanksAndSuccesses.push(" ");
+        blanksAndSuccesses.push("_");
     }
 
     // Change HTML to reflect game round conditions
@@ -49,6 +49,7 @@ function startGame() {
 }
 
 function checkLetters(letter) {
+    isLetterInWord = false;
 
     for (var i = 0; i < numBlanks; i++) {
         if (selectedWord[i] == letter) {
@@ -60,15 +61,16 @@ function checkLetters(letter) {
         if (selectedWord[i] == letter) {
             blanksAndSuccesses[i] = letter;
         }
-        else {
-            wrongLetters.push(letter);
-            guessesLeft--
-        }
-
-        // Testing and Debuggin
-        console.log(blanksAndSuccesses);
     }
+    if (isLetterInWord === false) {
+        wrongLetters.push(letter);
+        guessesLeft--
+    }
+
+    // Testing and Debuggin
+    console.log(blanksAndSuccesses);
 }
+
 
 
 function roundComplete() {
@@ -104,12 +106,16 @@ function roundComplete() {
 // MAIN PROCESS 
 // ========================================================================
 
+startGame();
+
 // Register keyclicks
+
 
 document.onkeyup = function (event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
     roundComplete();
+
 
     console.log(letterGuessed);
 }
