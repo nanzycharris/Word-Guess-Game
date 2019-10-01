@@ -72,25 +72,25 @@ function checkLetters(letter) {
 }
 
 
-
 function roundComplete() {
     console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " Guesses Left " + guessesLeft);
 
     // Update the HTML to reflect the most recent count stats
     document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
     document.getElementById("numGuesses").innerHTML = guessesLeft;
+    document.getElementById("winCounter").innerHTML = winCount;
     document.getElementById("wrongGuess").innerHTML = wrongLetters.join(" ");
 
     // Check if user won
-    if (isLetterInWord.toString() == blanksAndSuccesses.toString()) {
+    if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
         winCount++;
         alert("You Won!")
-
         // Update the win counter in the HTML
         document.getElementById("winCounter").innerHTML = winCount;
 
         startGame();
     }
+
     // Check if user lost
     else if (guessesLeft == 0) {
         lossCount++;
@@ -107,6 +107,8 @@ function roundComplete() {
 // ========================================================================
 
 startGame();
+checkLetters();
+roundComplete();
 
 // Register keyclicks
 
