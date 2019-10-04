@@ -92,18 +92,20 @@ function roundComplete() {
         }, 500);
         // Update the win counter in the HTML
         document.getElementById("winCounter").innerHTML = winCount;
-
-
     }
 
     // Check if user lost
     else if (guessesLeft == 0) {
         lossCount++;
-        alert("You lost!");
+        // Show the complete word
+        wordToGuess.innerHTML = selectedWord;
+        // Setting time out to show the complete word before alert
+        setTimeout(function () {
+            alert("You lost!");
+            startGame();
+        }, 500);
         // Update the HTML 
         document.getElementById("lossCounter").innerHTML = lossCount;
-
-        startGame();
     }
 }
 
