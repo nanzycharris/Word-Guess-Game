@@ -18,6 +18,11 @@ var guessesLeft = 0;
 // FUNCTIONS (reusable blocks of code that I will call upon when needed)
 // ========================================================================
 
+function play() {
+    var audio = document.getElementById("audioYeah");
+    audio.play();
+}
+
 function startGame() {
     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)]
     lettersinWord = selectedWord.split("");
@@ -76,7 +81,7 @@ function roundComplete() {
     console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " Guesses Left " + guessesLeft);
 
     // Update the HTML to reflect the most recent count stats
-    var wordToGuess = document.getElementById("wordToGuess")
+    var wordToGuess = document.getElementById("wordToGuess");
     wordToGuess.innerHTML = blanksAndSuccesses.join(" ");
     document.getElementById("numGuesses").innerHTML = guessesLeft;
     document.getElementById("winCounter").innerHTML = winCount;
@@ -87,9 +92,10 @@ function roundComplete() {
         winCount++;
         wordToGuess.innerHTML = blanksAndSuccesses.join(" ");
         setTimeout(function () {
+            play();
             alert("You won!");
             startGame();
-        }, 500);
+        }, 00);
         // Update the win counter in the HTML
         document.getElementById("winCounter").innerHTML = winCount;
     }
