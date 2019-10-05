@@ -109,7 +109,7 @@ function roundComplete() {
         setTimeout(function () {
             alert("You lost!");
             startGame();
-        }, 500);
+        }, 00);
         // Update the HTML 
         document.getElementById("lossCounter").innerHTML = lossCount;
     }
