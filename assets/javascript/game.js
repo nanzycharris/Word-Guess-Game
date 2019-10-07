@@ -2,7 +2,7 @@
 // ========================================================================
 // Arrays and variables for holding data
 
-var wordOptions = ["mustang", "continental", "marker", "daisy", "parabellum", "bourbon", "boogeyman", "jonathan"];
+var wordOptions = ["mustang", "continental", "marker", "daisy", "parabellum", "bourbon", "boogeyman", "jonathan", "excommunicado", "jardani", "jovanovich", "helen"];
 var selectedWord = "";
 var lettersinWord = [];
 var numBlanks = 0;
@@ -120,7 +120,7 @@ function roundComplete() {
 // ========================================================================
 
 window.onload = function () {
-    alert("Just type a letter to start the game");
+    alert("Just type a letter to start the game, and away we go...");
     startGame();
     checkLetters();
     roundComplete();
