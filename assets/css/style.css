@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../images/johnwick3background1.jpg); 
+}
 .container {
     width: 1024px;
     align-content: center;
@@ -13,11 +16,13 @@ img {
     height: 387px;
     align-self: center;
     padding-top: 35px;
+    margin-left: 35px;
+    margin-bottom: 15px;
 }
 
 p {
-    font-size: 13.5px;
-    margin-bottom: -10px;
+    font-size: 13px;
+    color: rgb(17, 62, 211);
 }
 
 h2 {
@@ -26,6 +31,12 @@ h2 {
 
 .card-header {
     border: dotted rgb(49, 46, 46) .5px;
-    color: rgb(41, 77, 155);
-    background: rgb(206, 178, 233);
+    color: rgb(156, 184, 245);
+    background: rgb(143, 12, 88);
+}
+
+.card-footer {
+    border: dotted rgb(49, 46, 46) .5px;
+    color: rgb(156, 184, 245);
+    background: rgb(143, 12, 88);
 }
