@@ -35,7 +35,7 @@ h2 {
     background: rgb(143, 12, 88);
 }
 
-.card-footer {
+.sticky-footer {
     border: dotted rgb(49, 46, 46) .5px;
     color: rgb(156, 184, 245);
     background: rgb(143, 12, 88);
