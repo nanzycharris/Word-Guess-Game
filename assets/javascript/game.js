@@ -14,6 +14,7 @@ var wrongLetters = [];
 var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 0;
+var wrongLtr = 0;
 
 // FUNCTIONS (reusable blocks of code that I will call upon when needed)
 // ========================================================================
@@ -84,6 +85,7 @@ function roundComplete() {
     var wordToGuess = document.getElementById("wordToGuess");
     wordToGuess.innerHTML = blanksAndSuccesses.join(" ");
     document.getElementById("numGuesses").innerHTML = guessesLeft;
+    document.getElementById("wrongGuess").innerHTML = wrongLtr;
     document.getElementById("winCounter").innerHTML = winCount;
     document.getElementById("wrongGuess").innerHTML = wrongLetters.join(" ");
 
@@ -112,6 +114,7 @@ function roundComplete() {
         }, 00);
         // Update the HTML 
         document.getElementById("lossCounter").innerHTML = lossCount;
+        document.getElementById("wrongGuess").innerHTML = wrongLtr;
     }
 }
 
@@ -124,6 +127,7 @@ window.onload = function () {
     startGame();
     checkLetters();
     roundComplete();
+    document.getElementById("wrongGuess").innerHTML = wrongLtr;
     document.onkeyup = function (event) {
         var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
         checkLetters(letterGuessed);
@@ -135,6 +139,5 @@ window.onload = function () {
 }
 
 
-// Register keyclicks
 
 
