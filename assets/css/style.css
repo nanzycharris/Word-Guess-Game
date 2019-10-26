@@ -4,13 +4,18 @@
 
 body {
     background-image: url(../images/johnwick3background1.jpg); 
+    background-repeat: repeat;
     width: 100%;
     justify-content: center;
 }
 
 .container {
-    width: 1024px;
+    align-items: center;
     justify-content: center;
+    width: 1024px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;;
 }
 
 img {
